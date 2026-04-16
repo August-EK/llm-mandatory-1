@@ -1,16 +1,16 @@
 from crewai import Agent, Task, Crew, LLM, Process
 
-# Endpoint 1 — Mistral bruges til planlægning og dokumentation
+# Endpoint 1 — Mistral på port 11434
 llm_mistral = LLM(
     model="ollama/mistral:7b-instruct-q4_K_M",
     base_url="http://localhost:11434",
     timeout=120
 )
 
-# Endpoint 2 — Llama3 bruges til kodning og test
+# Endpoint 2 — Llama3 på port 11435
 llm_llama = LLM(
     model="ollama/llama3:8b",
-    base_url="http://localhost:11434",
+    base_url="http://localhost:11435",
     timeout=120
 )
 
